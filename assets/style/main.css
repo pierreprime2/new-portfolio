@@ -1,0 +1,205 @@
+body {
+    font-family: 'Barlow Semi Condensed', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-image: url('./../images/protruding-squares.svg');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#container {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: rgb(13, 60, 71);
+    border-radius: 25px;
+    padding: 5%;
+    border-style: dashed;
+    border-color: palevioletred;
+    border-width: 8px;
+}
+
+#introductory {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.circle-wrapper {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 8px;
+    border-color: palevioletred;
+    overflow: hidden;
+    margin: auto;
+}
+
+.circle-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Crops and fills */
+    object-position: center;
+    /* Ensures it's centered */
+}
+
+#links {
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    /* Aligne avec le centre des pastilles (voir width des points) */
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #007bff;
+    /* Bleu */
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 80px;
+    /* décaler le contenu à droite */
+}
+
+.timeline-point {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    /* centre la pastille sur la ligne */
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 4px solid #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.timeline-point img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -80px;
+    top: 0;
+    transform: translateY(0%);
+    white-space: nowrap;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.timeline-content h3 {
+    margin: 0 0 8px;
+    font-size: 1.2em;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+a {
+    color: white;
+}
+
+h1,
+h2,
+h2 em,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0px;
+}
+
+h2 {
+    color: palevioletred;
+}
+
+#titles {
+    flex: 1 1 300px;
+}
+
+.intro-quote {
+    text-align: justify;
+}
+
+h2 em {
+    margin-top: 0px;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list img {
+    width: 60px;
+}
+
+.timeline h3 {
+    text-align: left;
+}
+
+.centered-figure {
+    text-align: center;
+}
+
+.has-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    /* above the figure */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.9em;
+    z-index: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.has-tooltip:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
