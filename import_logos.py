@@ -8,12 +8,12 @@ tech_logos = [
     "mysql",
     "mongodb",
     "docker",
-    "dockercompose",  # Note: No space or dash
     "kubernetes",
     "symfony",
     "laravel",
     "linux",
-    "twig"
+    "react",
+    "nextdotjs"
 ]
 
 # Output directory
